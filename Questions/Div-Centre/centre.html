@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div-Centre</title>
+    <style>
+      #inner {
+        border: 0.05em solid black;
+      }
+
+      #outer {
+        border: 0.05em solid red;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      #innersecond {
+        display: table;
+        margin: 0 auto;
+        border: 1px solid black;
+      }
+
+      #outersecond {
+        border: 1px solid red;
+        width: 100%;
+      }
+
+      .container {
+        font-family: arial;
+        font-size: 24px;
+        margin: 25px;
+        width: 350px;
+        height: 200px;
+        outline: dashed 1px black;
+        /* Center vertically and horizontally */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .child {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+      }
+      .containersecond {
+        font-family: arial;
+        font-size: 24px;
+        margin: 25px;
+        width: 350px;
+        height: 200px;
+        outline: dashed 1px black;
+        /* Setup */
+        position: relative;
+      }
+
+      .childsecond {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        /* Center vertically */
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+      .container_h {
+        font-family: arial;
+        font-size: 24px;
+        margin: 25px;
+        width: 350px;
+        height: 200px;
+        outline: dashed 1px black;
+      }
+
+      .child_h {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        /* Center horizontally*/
+        margin: 0 auto;
+      }
+
+      .container_MDN {
+            border: 2px solid rgb(75, 70, 74);
+            border-radius: .5em;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item {
+            border: 2px solid rgb(95, 97, 110);
+            border-radius: .5em;
+            padding: 20px;
+            width: 10em;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="outer">
+      <div id="inner">Foo foo</div>
+    </div>
+
+    <div id="outersecond">
+      <div id="innersecond">Foo foo</div>
+    </div>
+
+    <div class="container">
+      <div class="child"></div>
+    </div>
+
+    <div class="containersecond">
+      <div class="childsecond"></div>
+    </div>
+
+    <div class="container_h">
+      <div class="child_h"></div>
+    </div>
+
+    <div class="container_MDN">
+        <div class="item">I am centered!</div>
+    </div>
+  </body>
+</html>
+
+<!-- Points to remember -->
+
+<!-- 1. With flexbox it is very easy to style the div horizontally and vertically centered. -->
+<!-- 2. To align the div vertically centered, use the property align-items: center.-->
+<!-- 3. #inner {
+            width: 50%;
+            margin: 0 auto; -------Centre the element. 
+        } -->
+
+<!-- Centering Horizontally -->
+<!-- 4. To center text or links horizontally, just use the text-align property with the value center: -->
+<!-- 5. Use the shorthand margin property with the value 0 auto to center block-level elements like a div horizontally: -->
+
+<!-- How to Center Vertically -->
+<!-- 6. Set the position property of the parent element to relative.
+        For the child element, set the position property to absolute and set top to 50%.
+        Now instead of using a negative margin to truly center the child element,
+        just use transform: translate(0, -50%): -->
+
+<!-- How to Center a Div Vertically and Horizontally with Flexbox -->
+
+<!-- 7. This is really just a combination of the two previous Flexbox methods.
+        To center the child element(s) horizontally and vertically, apply justify-content: center
+        and align-items: center to the parent element: -->
+
+<!-- 8. To center one box inside another we make the containing box a flex container.
+        Then set align-items to center to perform centering on the block axis, and 
+        justify-content to center to perform centering on the inline axis. -->
+        
