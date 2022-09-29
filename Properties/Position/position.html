@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Property - CSS</title>
+    <style>
+      .parent {
+        border: 2px solid #0074d9;
+        color: #0074d9;
+        padding: 20px;
+        /* position: relative; */
+      }
+
+      .element {
+        border: 1px dotted #000;
+        background-color: #eee;
+        padding: 20px;
+        color: #000;
+        position: absolute;
+        /* left: 0;
+        right: 0;
+        bottom: 0; */
+      }
+      body,
+      html {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Position: Absolute -->
+    <!-- If a child element has an absolute value then the parent element will behave as if 
+         the child isn’t there at all: -->
+    <!-- And when we try to set other values such as left, bottom, and right 
+         we’ll find that the child element is responding not to the dimensions
+         of its parent, but the document: -->
+    <div class="parent">
+      Parent element
+      <div class="element">Child element</div>
+    </div>
+    <!-- To make the child element positioned absolutely from its parent element
+         we need to set this on the parent element itself: -->
+  </body>
+</html>
+
+<!-- static: every element has a static position by default, so the element will stick to
+     the normal page flow. So if there is a left/right/top/bottom/z-index set then there
+     will be no effect on that element.
+
+     relative: an element’s original position remains in the flow of the document, 
+     just like the static value. But now left/right/top/bottom/z-index will work. 
+     The positional properties “nudge” the element from the original position in that direction.
+     
+     absolute: the element is removed from the flow of the document and other elements will
+     behave as if it’s not even there whilst all the other positional properties will work on
+     it.
+
+     fixed: the element is removed from the flow of the document like absolutely positioned elements.
+     In fact they behave almost the same, only fixed positioned elements are always relative to
+     the document, not any particular parent, and are unaffected by scrolling.
+ 
+     sticky: the element is treated like a relative value until the scroll location
+     of the viewport reaches a specified threshold, at which point the element takes
+     a fixed position where it is told to stick.
+     
+     inherit: the position value doesn’t cascade, so this can be used to specifically 
+     force it to, and inherit the positioning value from its parent. -->
+     
