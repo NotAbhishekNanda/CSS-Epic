@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4effa;
+    font-size: 1.25rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    background-color: #9b72cf;
+    padding: 1em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 200px 500px;
+    grid-template-rows: 100px 200px;
+/*  grid-template is the shorthand property for grid-template-rows and grid-template-columns. Sp the statement below will give the same result as above two statements.  */
+/*     grid-template: 100px 200px/ 200px 200px 500px; */
+}
+
+.grid-item {
+    background-color: #c8b1e4;
+    padding: 1em;
+    border: 1px solid white;
+    text-align: center;
+}
